@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    background-color: #FCFAEA;
+}
+
+/* Header section */
+header {
+    background-color: #1D1C0C;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#hamburger {
+    width: 40px;
+    height: 40px;
+}
+
+menu {
+    width: 100%;
+}
+
+.logo, .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: .75rem 0;
+    font-size: x-large;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FCFAEA;
+}
+
+.login-btn {
+    background-color: #F9FF12;
+    color: #1D1C0C;
+    padding: .5em 1.25em;
+    border: .5px solid #1D1C0C;
+    border-radius: .25em;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.yellow {
+    color: #F9FF12;
+}
+
+.white {
+    color: #FCFAEA;
+}
+
+/* Search section */
+.search,
+.car-ads {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+.search h1,
+.car-ads h1 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+label, select {
+    margin: 0 auto .5em;
+    text-align: center;
+}
+
+.search-text {
+    margin: 2em auto 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#search-input {
+    margin-right: .5em;
+    width: 75%;
+    border: 1px solid #1D1C0C;
+    border-radius: .2em;
+}
+
+/* Ads section */
+.car-ads-grid {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, 350px);
+    justify-content: center;
+}
+
+.car-ad {
+    margin: .5rem auto 1rem;
+    width: 350px;
+    border: .5px solid #1D1C0C;
+}
+
+.car-desc {
+    background-color: white;
+    padding: .5em;
+}
+
+.car-ad img {
+    display: block;
+    max-width: 100%;
+    width: 350px;
+    height: 200px;
+}
+
+.car-name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.car-name,
+.car-price {
+    margin: .25em 0;
+}
+
+.car-name {
+    font-size: medium;
+}
+
+.car-price,
+.car-details {
+    font-size: small;
+}
+
+.car-details {
+    text-align: right;
+}
+
+/* Guide section */
+.guide {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.guide img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Footer section */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: #1D1C0C;
+    color: #FCFAEA;
+}
+
+footer .logo {
+    justify-content: flex-start;
+}
+
+.contact, .contact-section, .contact-info {
+    margin-top: .75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact a {
+    margin: .75em 0;
+    text-decoration: none;
+    color: #FCFAEA;
+}
+
+.contact .login-btn {
+    color: #1D1C0C;
+}
+
+footer p {
+    margin-top: 2em;
+    text-align: center;
+}
+
+@media screen and (min-width: 550px) {
+    .guide {
+        justify-content: space-between;
+        padding: 2em 2.5em;
+    }
+
+    .guide-desc {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .search-text {
+        width: 60%;
+    }
+
+    .guide {
+        padding: 2.5em 3.5em;
+    }
+
+    .contact-sections {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .contact p {
+        margin-top: 2em;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    header, nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header {
+        padding: 2rem 2.5rem;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        font-size: large;
+    }
+
+    menu, nav {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .guide {
+        padding: 2em 4.5em;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .contact, .contact-sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-info {
+        width: 30%;
+    }
+
+    .contact-sections {
+        width: 67.5%;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 1em 4em;
+    }
+
+    .search-text {
+        width: 30%;
+    }
+
+    nav {
+        width: 35%;
+    }
+
+    .guide {
+        justify-content: space-around;
+        padding: 3em 6em;
+    }
+
+    .guide-desc {
+        width: 50%;
+    }
+
+    .contact {
+        width: 60%;
+    }
+}
