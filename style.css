@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300;400;500;700;900&display=swap');
 
+:root {
+    --yellow: #F9FF12;
+    --black: #1D1C0C;
+    --white: #FCFAEA;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -8,12 +14,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Encode Sans Expanded', sans-serif;
-    background-color: #FCFAEA;
+    background-color: var(--white);
 }
 
 /* Header section */
 header {
-    background-color: #1D1C0C;
+    background-color: var(--black);
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -50,14 +56,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #FCFAEA;
+    color: var(--white);
 }
 
 .login-btn {
-    background-color: #F9FF12;
-    color: #1D1C0C;
+    background-color: var(--yellow);
+    color: var(--black);
     padding: .5em 1.25em;
-    border: .5px solid #1D1C0C;
+    border: .5px solid var(--black);
     border-radius: .25em;
     font-weight: bold;
 }
@@ -68,11 +74,11 @@ nav ul li a {
 }
 
 .yellow {
-    color: #F9FF12;
+    color: var(--yellow);
 }
 
 .white {
-    color: #FCFAEA;
+    color: var(--white);
 }
 
 /* Search section */
@@ -106,7 +112,7 @@ label, select {
 #search-input {
     margin-right: .5em;
     width: 75%;
-    border: 1px solid #1D1C0C;
+    border: 1px solid var(--black);
     border-radius: .2em;
 }
 
@@ -121,7 +127,7 @@ label, select {
 .car-ad {
     margin: .5rem auto 1rem;
     width: 350px;
-    border: .5px solid #1D1C0C;
+    border: .5px solid var(--black);
 }
 
 .car-desc {
@@ -180,8 +186,8 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 2em;
-    background-color: #1D1C0C;
-    color: #FCFAEA;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 footer .logo {
@@ -199,11 +205,11 @@ footer .logo {
 .contact a {
     margin: .75em 0;
     text-decoration: none;
-    color: #FCFAEA;
+    color: var(--white);
 }
 
 .contact .login-btn {
-    color: #1D1C0C;
+    color: var(--black);
 }
 
 footer p {
