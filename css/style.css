@@ -4,6 +4,7 @@
     --yellow: #F9FF12;
     --black: #1D1C0C;
     --white: #FCFAEA;
+    --font-family: 'Encode Sans Expanded', sans-serif;
 }
 
 * {
@@ -13,14 +14,14 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Encode Sans Expanded', sans-serif;
+    font-family: var(--font-family);
     background-color: var(--white);
 }
 
 /* Header section */
 header {
     background-color: var(--black);
-    padding: 2rem 1.5rem;
+    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -34,7 +35,8 @@ menu {
     width: 100%;
 }
 
-.logo, .menu {
+.logo,
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +52,7 @@ nav ul {
 
 nav ul li {
     list-style-type: none;
-    margin: .75rem 0;
+    margin: .5rem 0;
     font-size: x-large;
 }
 
@@ -59,13 +61,40 @@ nav ul li a {
     color: var(--white);
 }
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-btn,
+.modal-btn,
+.cancel-btn {
+    cursor: pointer;
+    border-radius: .25em;
+    font-family: var(--font-family);
+    font-weight: bold;
+    padding: .5em 1.25em;
+    font-size: medium;
+}
+
 .login-btn {
     background-color: var(--yellow);
     color: var(--black);
-    padding: .5em 1.25em;
     border: .5px solid var(--black);
-    border-radius: .25em;
-    font-weight: bold;
+}
+
+.buttons {
+    border-color: var(--yellow);
+}
+
+.modal-btn,
+.cancel-btn {
+    margin-top: .25rem;
+    background-color: var(--black);
+    color: var(--white);
+    border: .5px solid var(--white);
 }
 
 .logo img {
@@ -79,6 +108,59 @@ nav ul li a {
 
 .white {
     color: var(--white);
+}
+
+#overlay {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.login-form {
+    margin: 30% auto;
+    padding: 1em 2em;
+    width: 80%;
+    max-width: 500px;
+    height: 350px;
+    background-color: var(--white);
+    border-radius: .5em;
+}
+
+.login-item {
+    margin: .75rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.login-item label {
+    width: 100%;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-form .login-btn,
+.cancel-btn {
+    margin-top: .25rem;
+    font-size: small;
+}
+
+.close-login {
+    margin-top: 3rem;
+}
+
+.close-login a {
+    margin-top: .5rem;
+    display: block;
+    font-size: small;
 }
 
 /* Search section */
@@ -97,7 +179,8 @@ nav ul li a {
     font-size: xx-large;
 }
 
-label, select {
+label,
+select {
     margin: 0 auto .5em;
     text-align: center;
 }
@@ -194,7 +277,9 @@ footer .logo {
     justify-content: flex-start;
 }
 
-.contact, .contact-section, .contact-info {
+.contact,
+.contact-section,
+.contact-info {
     margin-top: .75em;
     display: flex;
     flex-direction: column;
@@ -251,8 +336,11 @@ footer p {
     #hamburger {
         display: none;
     }
+}
 
-    header, nav ul {
+@media screen and (min-width: 800px) {
+    header,
+    nav ul {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -266,12 +354,23 @@ footer p {
         font-size: large;
     }
 
-    menu, nav {
-        width: 50%;
+    menu {
+        width: 35%;
+    }
+    nav {
+        width: 65%;
     }
 }
 
 @media screen and (min-width: 1000px) {
+    .login-form {
+        margin: 200px auto;
+    }
+
+    #overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
     .guide {
         padding: 2em 4.5em;
     }
@@ -280,7 +379,8 @@ footer p {
         width: 100%;
     }
 
-    .contact, .contact-sections {
+    .contact,
+    .contact-sections {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -294,6 +394,10 @@ footer p {
         width: 67.5%;
         justify-content: space-around;
     }
+
+    nav {
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -306,7 +410,13 @@ footer p {
     }
 
     nav {
-        width: 35%;
+        width: 60%;
+    }
+
+    .buttons {
+        width: 45%;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .guide {
@@ -320,5 +430,15 @@ footer p {
 
     .contact {
         width: 60%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    nav {
+        width: 50%;
+    }
+
+    .buttons {
+        justify-content: space-around;
     }
 }
