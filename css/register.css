@@ -1,3 +1,10 @@
+:root {
+    --yellow: #F9FF12;
+    --black: #1D1C0C;
+    --white: #FCFAEA;
+    --font-family: 'Encode Sans Expanded', sans-serif;
+}
+
 nav {
     width: 30%;
 }
@@ -14,7 +21,7 @@ nav {
     margin: 2em auto;
     padding: 2em;
     background-color: white;
-    border: .5px solid #1D1C0C;
+    border: .5px solid var(--black);
     border-radius: .5em;
     display: grid;
     grid-gap: 2em 4em;
@@ -58,7 +65,7 @@ nav {
 .link-back {
     width: 35%;
     text-decoration: none;
-    color: #1D1C0C;
+    color: var(--black);
     font-weight: bold;
 }
 

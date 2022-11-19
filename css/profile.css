@@ -1,0 +1,100 @@
+:root {
+    --yellow: #F9FF12;
+    --black: #1D1C0C;
+    --white: #FCFAEA;
+    --font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+/* Basic profile options */
+.profile,
+.profile-section {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.profile-info {
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile-name {
+    font-size: large;
+    margin-left: 2em;
+}
+
+.profile-options ul {
+    padding-left: 0;
+}
+
+.profile-options ul li {
+    width: 100%;
+    list-style-type: none;
+    margin: 1.25rem 0;
+}
+
+.profile-options ul li:last-child {
+    margin-top: 1.75rem;
+}
+
+.profile-options ul li a {
+    color: var(--black);
+    font-size: large;
+    text-decoration: none;
+}
+
+.profile-btn {
+    cursor: pointer;
+    border-radius: .25em;
+    font-family: var(--font-family);
+    font-weight: bold;
+    padding: .5em 1.25em;
+    font-size: medium;
+    background-color: var(--yellow);
+    color: var(--black);
+    border: .5px solid var(--black);
+}
+
+.profile-section h1 {
+    font-size: x-large;
+    text-align: center;
+}
+
+/* Saved searches */
+.saved-searches ul {
+    padding-left: 0;
+}
+
+.search {
+    width: 80%;
+    padding: 1rem;
+    margin: 1rem auto;
+    border: .5px solid var(--black);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: left;
+    background-color: white;
+}
+
+.search p {
+    display: inline-block;
+    margin: 0 0 .25rem 1rem;
+    font-weight: bold;
+}
+
+/* Profile data */
+.profile-data div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.profile-data .profile-btn {
+    margin-top: 1rem;
+}
