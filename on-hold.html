@@ -5,11 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/profile.css">
-        <title>UsedCars | Profil korisnika</title>
+        <title>UsedCars</title>
         <link rel="icon" type="image/x-icon" href="./images/icons/car-icon.png">
         <script src="./js/index.js" defer></script>
-        <script src="./js/profile.js" defer></script>
     </head>
     <body>
         <header>
@@ -45,7 +43,7 @@
                         </div>
                         <button type="submit" class="login-btn">Uloguj se</button>
                     </div>
-        
+            
                     <div class="close-login">
                         <button type="button" class="cancel-btn">Zatvori</button>
                         <a href="register.html">Nemate svoj nalog? Napravite novi!</a>
@@ -54,24 +52,8 @@
             </div>
         </header>
         <main>
-            <section class="profile">
-                <h1 class="profile-username">Dobrodošli, cvrlee10!</h1>
-                <div class="profile-info">
-                    <img src="./images/cvrle.jpg" alt="Profile image of user" class="profile-image">
-                    <h2 class="profile-name">Cvrle Auto</h2>
-                </div>
-                <div class="profile-options">
-                    <ul>
-                        <li><a href="./adding-ad.html" class="new-ad">Novi oglas</a></li>
-                        <li><a href="#ads" onclick="showAds()" class="link-to-section">Moji oglasi</a></li>
-                        <li><a href="#searches" onclick="showSearches()" class="link-to-section">Sačuvane pretrage</a></li>
-                        <li><a href="#data" onclick="showProfileData()" class="link-to-section">Podaci o profilu</a></li>
-                        <li><a href="./index.html" class="profile-btn">Odjavite se</a></li>
-                    </ul>
-                </div>
-            </section>
-            <section class="profile-section car-ads" id="ads">
-                <h1>Moji oglasi</h1>
+            <section class="car-ads">
+                <h1>Oglasi na čekanju</h1>
                 <div class="car-ads-grid">
                     <div class="car-ad">
                         <img src="./images/car_images/car1.jpg" alt="A car">
@@ -104,48 +86,6 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="profile-section saved-searches" id="searches">
-                <h1>Sačuvane pretrage</h1>
-                <ul>
-                    <li class="search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M13.707 2.293A.996.996 0 0 0 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9a.996.996 0 0 0-.293-.707l-6-6zM6 4h6.586L18 9.414l.002 9.174-2.568-2.568c.35-.595.566-1.281.566-2.02 0-2.206-1.794-4-4-4s-4 1.794-4 4 1.794 4 4 4c.739 0 1.425-.216 2.02-.566L16.586 20H6V4zm6 12c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"></path></svg>
-                        <p>audi</p>
-                    </li>
-                    <li class="search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M13.707 2.293A.996.996 0 0 0 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9a.996.996 0 0 0-.293-.707l-6-6zM6 4h6.586L18 9.414l.002 9.174-2.568-2.568c.35-.595.566-1.281.566-2.02 0-2.206-1.794-4-4-4s-4 1.794-4 4 1.794 4 4 4c.739 0 1.425-.216 2.02-.566L16.586 20H6V4zm6 12c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"></path></svg>
-                        <p>dizel</p>
-                    </li>
-                    <li class="search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M13.707 2.293A.996.996 0 0 0 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9a.996.996 0 0 0-.293-.707l-6-6zM6 4h6.586L18 9.414l.002 9.174-2.568-2.568c.35-.595.566-1.281.566-2.02 0-2.206-1.794-4-4-4s-4 1.794-4 4 1.794 4 4 4c.739 0 1.425-.216 2.02-.566L16.586 20H6V4zm6 12c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"></path></svg>
-                        <p>2/3</p>
-                    </li>
-                </ul>
-            </section>
-            <section class="profile-section profile-data" id="data">
-                <h1>Podaci o profilu</h1>
-                <div>
-                    <p>Ime</p>
-                    <p class="bold">Cvrle</p>
-                </div>
-                <div>
-                    <p>Prezime</p>
-                    <p class="bold">Auto</p>
-                </div>
-                <div>
-                    <p>Korisničko ime</p>
-                    <p class="bold">cvrlee10</p>
-                </div>
-                <div>
-                    <p>Broj telefona</p>
-                    <p class="bold">061/423-34-12</p>
-                </div>
-                <div>
-                    <p>Email adresa</p>
-                    <p class="bold">cvrle123@gmail.com</p>
-                </div>
-                <button class="profile-btn">Promeni lozinku</button>
-                <button class="profile-btn">Obriši nalog</button>
             </section>
             <section class="guide">
                 <div class="guide-desc">

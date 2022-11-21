@@ -1,6 +1,6 @@
 const hamburger = document.getElementById("hamburger")
 const nav = document.getElementById("nav")
-const modalBtn = document.querySelector(".modal-btn")
+const modalButtons = document.querySelectorAll(".modal-btn")
 const cancelBtn = document.querySelector(".cancel-btn")
 const overlay = document.getElementById("overlay")
 
@@ -18,14 +18,15 @@ hamburger.addEventListener("click", function() {
     }
 })
 
-modalBtn.addEventListener("click", function() {
-    if (overlay.style.display == "none") {
-        overlay.style.display = "flex"
-    } else {
-        overlay.style.display = "none"
-    }
-})
-
+for (let i = 0; i < modalButtons.length; i++) {
+    modalButtons[i].addEventListener("click", function() {
+        if (overlay.style.display == "none") {
+            overlay.style.display = "flex"
+        } else {
+            overlay.style.display = "none"
+        }
+    })
+}
 cancelBtn.addEventListener("click", function() {
     overlay.style.display = "none"
 })
