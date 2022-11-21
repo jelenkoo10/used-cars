@@ -62,6 +62,10 @@
     text-align: center;
 }
 
+.profile-section {
+    display: none;
+}
+
 /* Saved searches */
 .saved-searches ul {
     padding-left: 0;
@@ -97,4 +101,51 @@
 
 .profile-data .profile-btn {
     margin-top: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+    .profile-data div {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .profile-data div {
+        width: 65%;
+    }
+
+    .profile-info {
+        width: 30%;
+    }
+
+    .profile-data .profile-btn {
+        margin: 1rem 1.5rem 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .search {
+        width: 60%;
+    }
+
+    .profile-section {
+        display: block;
+    }
+
+    .link-to-section {
+        display: none;
+    }
+
+    .profile-options .profile-btn {
+        display: inline-block;
+        margin: .75rem 0 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .profile-data div, 
+    .search {
+        width: 50%;
+    }
 }
