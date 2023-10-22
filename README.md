@@ -25,7 +25,9 @@ Users should be able to:
 Screenshots of homepage and profile page, as well as mobile design:
 
 ![](./images/screenshot.JPG)
+
 ![](./images/screenshot2.JPG)
+
 ![](./images/screenshot3.JPG)
 
 ## Process
@@ -33,13 +35,10 @@ Screenshots of homepage and profile page, as well as mobile design:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - CSS Grid
-- CSS Animations
+- JavaScript
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [GSAP](https://greensock.com/docs/) - Animation library
 
 ### How to access website pages
 
